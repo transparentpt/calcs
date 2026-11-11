@@ -1,0 +1,1860 @@
+{
+ "CONSTANTES": {
+  "PESO_MINIMO": 2500,
+  "PESO_LIMITE_LEVES": 11999,
+  "PESO_INICIO_PESADOS": 12000,
+  "DESCONTO_REGIAO_AUTONOMA": 0.5
+ },
+ "CATEGORIA_C": {
+  "LEVES": {
+   "ESCALOES": [
+    {
+     "min": 2500,
+     "max": 2500,
+     "taxa": 35.15
+    },
+    {
+     "min": 2501,
+     "max": 3500,
+     "taxa": 58.21
+    },
+    {
+     "min": 3501,
+     "max": 7500,
+     "taxa": 139.47
+    },
+    {
+     "min": 7501,
+     "max": 11999,
+     "taxa": 226.24
+    }
+   ]
+  },
+  "PESADOS": {
+   "2": {
+    "12000": {
+     "1990": {
+      "pneumatica": 245,
+      "outro": 253
+     },
+     "1991": {
+      "pneumatica": 226,
+      "outro": 238
+     },
+     "1994": {
+      "pneumatica": 215,
+      "outro": 225
+     },
+     "1997": {
+      "pneumatica": 208,
+      "outro": 215
+     },
+     "2000": {
+      "pneumatica": 206,
+      "outro": 213
+     }
+    },
+    "12001_12999": {
+     "1990": {
+      "pneumatica": 348,
+      "outro": 410
+     },
+     "1991": {
+      "pneumatica": 323,
+      "outro": 379
+     },
+     "1994": {
+      "pneumatica": 310,
+      "outro": 362
+     },
+     "1997": {
+      "pneumatica": 297,
+      "outro": 349
+     },
+     "2000": {
+      "pneumatica": 294,
+      "outro": 347
+     }
+    },
+    "13000_14999": {
+     "1990": {
+      "pneumatica": 351,
+      "outro": 416
+     },
+     "1991": {
+      "pneumatica": 325,
+      "outro": 385
+     },
+     "1994": {
+      "pneumatica": 313,
+      "outro": 366
+     },
+     "1997": {
+      "pneumatica": 300,
+      "outro": 353
+     },
+     "2000": {
+      "pneumatica": 298,
+      "outro": 351
+     }
+    },
+    "15000_17999": {
+     "1990": {
+      "pneumatica": 392,
+      "outro": 435
+     },
+     "1991": {
+      "pneumatica": 363,
+      "outro": 407
+     },
+     "1994": {
+      "pneumatica": 348,
+      "outro": 389
+     },
+     "1997": {
+      "pneumatica": 332,
+      "outro": 371
+     },
+     "2000": {
+      "pneumatica": 330,
+      "outro": 368
+     }
+    },
+    "18000_plus": {
+     "1990": {
+      "pneumatica": 497,
+      "outro": 554
+     },
+     "1991": {
+      "pneumatica": 460,
+      "outro": 512
+     },
+     "1994": {
+      "pneumatica": 440,
+      "outro": 490
+     },
+     "1997": {
+      "pneumatica": 425,
+      "outro": 469
+     },
+     "2000": {
+      "pneumatica": 422,
+      "outro": 463
+     }
+    }
+   },
+   "3": {
+    "less_15000": {
+     "1990": {
+      "pneumatica": 245,
+      "outro": 348
+     },
+     "1991": {
+      "pneumatica": 226,
+      "outro": 322
+     },
+     "1994": {
+      "pneumatica": 215,
+      "outro": 309
+     },
+     "1997": {
+      "pneumatica": 207,
+      "outro": 297
+     },
+     "2000": {
+      "pneumatica": 206,
+      "outro": 294
+     }
+    },
+    "15000_16999": {
+     "1990": {
+      "pneumatica": 345,
+      "outro": 390
+     },
+     "1991": {
+      "pneumatica": 320,
+      "outro": 360
+     },
+     "1994": {
+      "pneumatica": 306,
+      "outro": 347
+     },
+     "1997": {
+      "pneumatica": 293,
+      "outro": 330
+     },
+     "2000": {
+      "pneumatica": 291,
+      "outro": 327
+     }
+    },
+    "17000_17999": {
+     "1990": {
+      "pneumatica": 345,
+      "outro": 398
+     },
+     "1991": {
+      "pneumatica": 320,
+      "outro": 368
+     },
+     "1994": {
+      "pneumatica": 306,
+      "outro": 352
+     },
+     "1997": {
+      "pneumatica": 293,
+      "outro": 339
+     },
+     "2000": {
+      "pneumatica": 291,
+      "outro": 335
+     }
+    },
+    "18000_18999": {
+     "1990": {
+      "pneumatica": 448,
+      "outro": 494
+     },
+     "1991": {
+      "pneumatica": 417,
+      "outro": 458
+     },
+     "1994": {
+      "pneumatica": 398,
+      "outro": 438
+     },
+     "1997": {
+      "pneumatica": 380,
+      "outro": 423
+     },
+     "2000": {
+      "pneumatica": 376,
+      "outro": 419
+     }
+    },
+    "19000_20999": {
+     "1990": {
+      "pneumatica": 449,
+      "outro": 494
+     },
+     "1991": {
+      "pneumatica": 419,
+      "outro": 458
+     },
+     "1994": {
+      "pneumatica": 400,
+      "outro": 443
+     },
+     "1997": {
+      "pneumatica": 383,
+      "outro": 423
+     },
+     "2000": {
+      "pneumatica": 379,
+      "outro": 424
+     }
+    },
+    "21000_22999": {
+     "1990": {
+      "pneumatica": 451,
+      "outro": 501
+     },
+     "1991": {
+      "pneumatica": 420,
+      "outro": 462
+     },
+     "1994": {
+      "pneumatica": 403,
+      "outro": 499
+     },
+     "1997": {
+      "pneumatica": 385,
+      "outro": 426
+     },
+     "2000": {
+      "pneumatica": 380,
+      "outro": 473
+     }
+    },
+    "23000_plus": {
+     "1990": {
+      "pneumatica": 504,
+      "outro": 561
+     },
+     "1991": {
+      "pneumatica": 467,
+      "outro": 523
+     },
+     "1994": {
+      "pneumatica": 449,
+      "outro": 499
+     },
+     "1997": {
+      "pneumatica": 429,
+      "outro": 476
+     },
+     "2000": {
+      "pneumatica": 427,
+      "outro": 473
+     }
+    }
+   },
+   "4": {
+    "less_23000": {
+     "1990": {
+      "pneumatica": 346,
+      "outro": 387
+     },
+     "1991": {
+      "pneumatica": 321,
+      "outro": 358
+     },
+     "1994": {
+      "pneumatica": 306,
+      "outro": 345
+     },
+     "1997": {
+      "pneumatica": 294,
+      "outro": 327
+     },
+     "2000": {
+      "pneumatica": 291,
+      "outro": 325
+     }
+    },
+    "23000_24999": {
+     "1990": {
+      "pneumatica": 435,
+      "outro": 491
+     },
+     "1991": {
+      "pneumatica": 407,
+      "outro": 456
+     },
+     "1994": {
+      "pneumatica": 389,
+      "outro": 435
+     },
+     "1997": {
+      "pneumatica": 371,
+      "outro": 420
+     },
+     "2000": {
+      "pneumatica": 368,
+      "outro": 417
+     }
+    },
+    "25000_25999": {
+     "1990": {
+      "pneumatica": 448,
+      "outro": 494
+     },
+     "1991": {
+      "pneumatica": 417,
+      "outro": 458
+     },
+     "1994": {
+      "pneumatica": 398,
+      "outro": 438
+     },
+     "1997": {
+      "pneumatica": 380,
+      "outro": 423
+     },
+     "2000": {
+      "pneumatica": 376,
+      "outro": 419
+     }
+    },
+    "26000_26999": {
+     "1990": {
+      "pneumatica": 821,
+      "outro": 930
+     },
+     "1991": {
+      "pneumatica": 764,
+      "outro": 865
+     },
+     "1994": {
+      "pneumatica": 728,
+      "outro": 825
+     },
+     "1997": {
+      "pneumatica": 699,
+      "outro": 791
+     },
+     "2000": {
+      "pneumatica": 694,
+      "outro": 783
+     }
+    },
+    "27000_28999": {
+     "1990": {
+      "pneumatica": 831,
+      "outro": 952
+     },
+     "1991": {
+      "pneumatica": 773,
+      "outro": 885
+     },
+     "1994": {
+      "pneumatica": 738,
+      "outro": 846
+     },
+     "1997": {
+      "pneumatica": 711,
+      "outro": 814
+     },
+     "2000": {
+      "pneumatica": 704,
+      "outro": 806
+     }
+    },
+    "29000_plus": {
+     "1990": {
+      "pneumatica": 856,
+      "outro": 965
+     },
+     "1991": {
+      "pneumatica": 793,
+      "outro": 897
+     },
+     "1994": {
+      "pneumatica": 758,
+      "outro": 859
+     },
+     "1997": {
+      "pneumatica": 728,
+      "outro": 824
+     },
+     "2000": {
+      "pneumatica": 722,
+      "outro": 819
+     }
+    }
+   }
+  },
+  "ARTICULADOS": {
+   "2_1": {
+    "12000": {
+     "1990": {
+      "pneumatica": 244,
+      "outro": 246
+     },
+     "1991": {
+      "pneumatica": 225,
+      "outro": 228
+     },
+     "1994": {
+      "pneumatica": 214,
+      "outro": 217
+     },
+     "1997": {
+      "pneumatica": 207,
+      "outro": 209
+     },
+     "2000": {
+      "pneumatica": 205,
+      "outro": 208
+     }
+    },
+    "12001_17999": {
+     "1990": {
+      "pneumatica": 338,
+      "outro": 416
+     },
+     "1991": {
+      "pneumatica": 317,
+      "outro": 385
+     },
+     "1994": {
+      "pneumatica": 304,
+      "outro": 365
+     },
+     "1997": {
+      "pneumatica": 293,
+      "outro": 352
+     },
+     "2000": {
+      "pneumatica": 291,
+      "outro": 350
+     }
+    },
+    "18000_24999": {
+     "1990": {
+      "pneumatica": 448,
+      "outro": 527
+     },
+     "1991": {
+      "pneumatica": 420,
+      "outro": 490
+     },
+     "1994": {
+      "pneumatica": 403,
+      "outro": 466
+     },
+     "1997": {
+      "pneumatica": 389,
+      "outro": 450
+     },
+     "2000": {
+      "pneumatica": 384,
+      "outro": 447
+     }
+    },
+    "25000_25999": {
+     "1990": {
+      "pneumatica": 483,
+      "outro": 539
+     },
+     "1991": {
+      "pneumatica": 454,
+      "outro": 503
+     },
+     "1994": {
+      "pneumatica": 433,
+      "outro": 477
+     },
+     "1997": {
+      "pneumatica": 420,
+      "outro": 459
+     },
+     "2000": {
+      "pneumatica": 418,
+      "outro": 456
+     }
+    },
+    "26000_plus": {
+     "1990": {
+      "pneumatica": 900,
+      "outro": 992
+     },
+     "1991": {
+      "pneumatica": 846,
+      "outro": 922
+     },
+     "1994": {
+      "pneumatica": 807,
+      "outro": 880
+     },
+     "1997": {
+      "pneumatica": 777,
+      "outro": 845
+     },
+     "2000": {
+      "pneumatica": 773,
+      "outro": 837
+     }
+    }
+   },
+   "2_2": {
+    "less_23000": {
+     "1990": {
+      "pneumatica": 332,
+      "outro": 383
+     },
+     "1991": {
+      "pneumatica": 315,
+      "outro": 355
+     },
+     "1994": {
+      "pneumatica": 300,
+      "outro": 339
+     },
+     "1997": {
+      "pneumatica": 290,
+      "outro": 325
+     },
+     "2000": {
+      "pneumatica": 289,
+      "outro": 323
+     }
+    },
+    "23000_25999": {
+     "1990": {
+      "pneumatica": 430,
+      "outro": 487
+     },
+     "1991": {
+      "pneumatica": 406,
+      "outro": 454
+     },
+     "1994": {
+      "pneumatica": 385,
+      "outro": 433
+     },
+     "1997": {
+      "pneumatica": 372,
+      "outro": 418
+     },
+     "2000": {
+      "pneumatica": 370,
+      "outro": 414
+     }
+    },
+    "26000_30999": {
+     "1990": {
+      "pneumatica": 822,
+      "outro": 936
+     },
+     "1991": {
+      "pneumatica": 770,
+      "outro": 872
+     },
+     "1994": {
+      "pneumatica": 733,
+      "outro": 831
+     },
+     "1997": {
+      "pneumatica": 712,
+      "outro": 799
+     },
+     "2000": {
+      "pneumatica": 705,
+      "outro": 791
+     }
+    },
+    "31000_32999": {
+     "1990": {
+      "pneumatica": 887,
+      "outro": 961
+     },
+     "1991": {
+      "pneumatica": 832,
+      "outro": 893
+     },
+     "1994": {
+      "pneumatica": 793,
+      "outro": 856
+     },
+     "1997": {
+      "pneumatica": 769,
+      "outro": 821
+     },
+     "2000": {
+      "pneumatica": 764,
+      "outro": 814
+     }
+    },
+    "33000_plus": {
+     "1990": {
+      "pneumatica": 945,
+      "outro": 1140
+     },
+     "1991": {
+      "pneumatica": 887,
+      "outro": 1062
+     },
+     "1994": {
+      "pneumatica": 847,
+      "outro": 1012
+     },
+     "1997": {
+      "pneumatica": 821,
+      "outro": 973
+     },
+     "2000": {
+      "pneumatica": 814,
+      "outro": 963
+     }
+    }
+   },
+   "2_3": {
+    "less_36000": {
+     "1990": {
+      "pneumatica": 836,
+      "outro": 942
+     },
+     "1991": {
+      "pneumatica": 782,
+      "outro": 876
+     },
+     "1994": {
+      "pneumatica": 749,
+      "outro": 836
+     },
+     "1997": {
+      "pneumatica": 725,
+      "outro": 804
+     },
+     "2000": {
+      "pneumatica": 719,
+      "outro": 794
+     }
+    },
+    "36000_37999": {
+     "1990": {
+      "pneumatica": 924,
+      "outro": 1001
+     },
+     "1991": {
+      "pneumatica": 867,
+      "outro": 938
+     },
+     "1994": {
+      "pneumatica": 828,
+      "outro": 895
+     },
+     "1997": {
+      "pneumatica": 800,
+      "outro": 867
+     },
+     "2000": {
+      "pneumatica": 792,
+      "outro": 861
+     }
+    },
+    "38000_plus": {
+     "1990": {
+      "pneumatica": 957,
+      "outro": 1127
+     },
+     "1991": {
+      "pneumatica": 895,
+      "outro": 1059
+     },
+     "1994": {
+      "pneumatica": 858,
+      "outro": 1008
+     },
+     "1997": {
+      "pneumatica": 829,
+      "outro": 978
+     },
+     "2000": {
+      "pneumatica": 823,
+      "outro": 968
+     }
+    }
+   },
+   "3_2": {
+    "less_36000": {
+     "1990": {
+      "pneumatica": 829,
+      "outro": 915
+     },
+     "1991": {
+      "pneumatica": 777,
+      "outro": 850
+     },
+     "1994": {
+      "pneumatica": 744,
+      "outro": 814
+     },
+     "1997": {
+      "pneumatica": 719,
+      "outro": 778
+     },
+     "2000": {
+      "pneumatica": 714,
+      "outro": 777
+     }
+    },
+    "36000_37999": {
+     "1990": {
+      "pneumatica": 850,
+      "outro": 968
+     },
+     "1991": {
+      "pneumatica": 799,
+      "outro": 900
+     },
+     "1994": {
+      "pneumatica": 764,
+      "outro": 861
+     },
+     "1997": {
+      "pneumatica": 734,
+      "outro": 825
+     },
+     "2000": {
+      "pneumatica": 729,
+      "outro": 824
+     }
+    },
+    "38000_39999": {
+     "1990": {
+      "pneumatica": 852,
+      "outro": 1031
+     },
+     "1991": {
+      "pneumatica": 800,
+      "outro": 957
+     },
+     "1994": {
+      "pneumatica": 765,
+      "outro": 914
+     },
+     "1997": {
+      "pneumatica": 738,
+      "outro": 877
+     },
+     "2000": {
+      "pneumatica": 730,
+      "outro": 875
+     }
+    },
+    "40000_plus": {
+     "1990": {
+      "pneumatica": 992,
+      "outro": 1275
+     },
+     "1991": {
+      "pneumatica": 931,
+      "outro": 1185
+     },
+     "1994": {
+      "pneumatica": 887,
+      "outro": 1132
+     },
+     "1997": {
+      "pneumatica": 861,
+      "outro": 1088
+     },
+     "2000": {
+      "pneumatica": 853,
+      "outro": 1087
+     }
+    }
+   },
+   "3_3": {
+    "less_36000": {
+     "1990": {
+      "pneumatica": 775,
+      "outro": 919
+     },
+     "1991": {
+      "pneumatica": 726,
+      "outro": 856
+     },
+     "1994": {
+      "pneumatica": 695,
+      "outro": 815
+     },
+     "1997": {
+      "pneumatica": 672,
+      "outro": 781
+     },
+     "2000": {
+      "pneumatica": 665,
+      "outro": 776
+     }
+    },
+    "36000_37999": {
+     "1990": {
+      "pneumatica": 914,
+      "outro": 1015
+     },
+     "1991": {
+      "pneumatica": 859,
+      "outro": 944
+     },
+     "1994": {
+      "pneumatica": 820,
+      "outro": 913
+     },
+     "1997": {
+      "pneumatica": 791,
+      "outro": 866
+     },
+     "2000": {
+      "pneumatica": 783,
+      "outro": 859
+     }
+    },
+    "38000_39999": {
+     "1990": {
+      "pneumatica": 924,
+      "outro": 1034
+     },
+     "1991": {
+      "pneumatica": 866,
+      "outro": 959
+     },
+     "1994": {
+      "pneumatica": 827,
+      "outro": 917
+     },
+     "1997": {
+      "pneumatica": 799,
+      "outro": 880
+     },
+     "2000": {
+      "pneumatica": 791,
+      "outro": 874
+     }
+    },
+    "40000_plus": {
+     "1990": {
+      "pneumatica": 944,
+      "outro": 1049
+     },
+     "1991": {
+      "pneumatica": 884,
+      "outro": 978
+     },
+     "1994": {
+      "pneumatica": 846,
+      "outro": 931
+     },
+     "1997": {
+      "pneumatica": 820,
+      "outro": 893
+     },
+     "2000": {
+      "pneumatica": 811,
+      "outro": 887
+     }
+    }
+   }
+  }
+ },
+ "CATEGORIA_D": {
+  "LEVES": {
+   "ESCALOES": [
+    {
+     "min": 2500,
+     "max": 2500,
+     "taxa": 9.25
+    },
+    {
+     "min": 2501,
+     "max": 3500,
+     "taxa": 15.77
+    },
+    {
+     "min": 3501,
+     "max": 7500,
+     "taxa": 35.88
+    },
+    {
+     "min": 7501,
+     "max": 11999,
+     "taxa": 59.8
+    }
+   ]
+  },
+  "PESADOS": {
+   "2": {
+    "12000": {
+     "1990": {
+      "pneumatica": 71,
+      "outro": 73
+     },
+     "1991": {
+      "pneumatica": 66,
+      "outro": 69
+     },
+     "1994": {
+      "pneumatica": 62,
+      "outro": 65
+     },
+     "1997": {
+      "pneumatica": 60,
+      "outro": 61
+     },
+     "2000": {
+      "pneumatica": 59,
+      "outro": 61
+     }
+    },
+    "12001_12999": {
+     "1990": {
+      "pneumatica": 81,
+      "outro": 106
+     },
+     "1991": {
+      "pneumatica": 77,
+      "outro": 100
+     },
+     "1994": {
+      "pneumatica": 74,
+      "outro": 96
+     },
+     "1997": {
+      "pneumatica": 72,
+      "outro": 93
+     },
+     "2000": {
+      "pneumatica": 71,
+      "outro": 92
+     }
+    },
+    "13000_14999": {
+     "1990": {
+      "pneumatica": 82,
+      "outro": 107
+     },
+     "1991": {
+      "pneumatica": 78,
+      "outro": 101
+     },
+     "1994": {
+      "pneumatica": 75,
+      "outro": 97
+     },
+     "1997": {
+      "pneumatica": 73,
+      "outro": 93
+     },
+     "2000": {
+      "pneumatica": 72,
+      "outro": 92
+     }
+    },
+    "15000_17999": {
+     "1990": {
+      "pneumatica": 102,
+      "outro": 148
+     },
+     "1991": {
+      "pneumatica": 96,
+      "outro": 137
+     },
+     "1994": {
+      "pneumatica": 92,
+      "outro": 132
+     },
+     "1997": {
+      "pneumatica": 87,
+      "outro": 128
+     },
+     "2000": {
+      "pneumatica": 86,
+      "outro": 127
+     }
+    },
+    "18000_plus": {
+     "1990": {
+      "pneumatica": 119,
+      "outro": 185
+     },
+     "1991": {
+      "pneumatica": 111,
+      "outro": 175
+     },
+     "1994": {
+      "pneumatica": 107,
+      "outro": 167
+     },
+     "1997": {
+      "pneumatica": 103,
+      "outro": 161
+     },
+     "2000": {
+      "pneumatica": 102,
+      "outro": 159
+     }
+    }
+   },
+   "3": {
+    "less_15000": {
+     "1990": {
+      "pneumatica": 70,
+      "outro": 83
+     },
+     "1991": {
+      "pneumatica": 65,
+      "outro": 78
+     },
+     "1994": {
+      "pneumatica": 61,
+      "outro": 75
+     },
+     "1997": {
+      "pneumatica": 59,
+      "outro": 73
+     },
+     "2000": {
+      "pneumatica": 59,
+      "outro": 73
+     }
+    },
+    "15000_16999": {
+     "1990": {
+      "pneumatica": 82,
+      "outro": 108
+     },
+     "1991": {
+      "pneumatica": 78,
+      "outro": 101
+     },
+     "1994": {
+      "pneumatica": 75,
+      "outro": 97
+     },
+     "1997": {
+      "pneumatica": 73,
+      "outro": 95
+     },
+     "2000": {
+      "pneumatica": 72,
+      "outro": 93
+     }
+    },
+    "17000_17999": {
+     "1990": {
+      "pneumatica": 82,
+      "outro": 108
+     },
+     "1991": {
+      "pneumatica": 78,
+      "outro": 101
+     },
+     "1994": {
+      "pneumatica": 75,
+      "outro": 97
+     },
+     "1997": {
+      "pneumatica": 73,
+      "outro": 95
+     },
+     "2000": {
+      "pneumatica": 72,
+      "outro": 93
+     }
+    },
+    "18000_18999": {
+     "1990": {
+      "pneumatica": 100,
+      "outro": 142
+     },
+     "1991": {
+      "pneumatica": 95,
+      "outro": 133
+     },
+     "1994": {
+      "pneumatica": 88,
+      "outro": 128
+     },
+     "1997": {
+      "pneumatica": 86,
+      "outro": 123
+     },
+     "2000": {
+      "pneumatica": 85,
+      "outro": 122
+     }
+    },
+    "19000_20999": {
+     "1990": {
+      "pneumatica": 100,
+      "outro": 142
+     },
+     "1991": {
+      "pneumatica": 95,
+      "outro": 133
+     },
+     "1994": {
+      "pneumatica": 88,
+      "outro": 128
+     },
+     "1997": {
+      "pneumatica": 86,
+      "outro": 123
+     },
+     "2000": {
+      "pneumatica": 85,
+      "outro": 122
+     }
+    },
+    "21000_22999": {
+     "1990": {
+      "pneumatica": 101,
+      "outro": 152
+     },
+     "1991": {
+      "pneumatica": 96,
+      "outro": 142
+     },
+     "1994": {
+      "pneumatica": 91,
+      "outro": 135
+     },
+     "1997": {
+      "pneumatica": 86,
+      "outro": 131
+     },
+     "2000": {
+      "pneumatica": 86,
+      "outro": 130
+     }
+    },
+    "23000_plus": {
+     "1990": {
+      "pneumatica": 151,
+      "outro": 188
+     },
+     "1991": {
+      "pneumatica": 142,
+      "outro": 178
+     },
+     "1994": {
+      "pneumatica": 135,
+      "outro": 170
+     },
+     "1997": {
+      "pneumatica": 131,
+      "outro": 163
+     },
+     "2000": {
+      "pneumatica": 130,
+      "outro": 162
+     }
+    }
+   },
+   "4": {
+    "less_23000": {
+     "1990": {
+      "pneumatica": 82,
+      "outro": 106
+     },
+     "1991": {
+      "pneumatica": 78,
+      "outro": 100
+     },
+     "1994": {
+      "pneumatica": 75,
+      "outro": 73
+     },
+     "1997": {
+      "pneumatica": 73,
+      "outro": 92
+     },
+     "2000": {
+      "pneumatica": 72,
+      "outro": 92
+     }
+    },
+    "23000_24999": {
+     "1990": {
+      "pneumatica": 117,
+      "outro": 140
+     },
+     "1991": {
+      "pneumatica": 109,
+      "outro": 132
+     },
+     "1994": {
+      "pneumatica": 104,
+      "outro": 127
+     },
+     "1997": {
+      "pneumatica": 102,
+      "outro": 122
+     },
+     "2000": {
+      "pneumatica": 101,
+      "outro": 122
+     }
+    },
+    "25000_25999": {
+     "1990": {
+      "pneumatica": 133,
+      "outro": 155
+     },
+     "1991": {
+      "pneumatica": 126,
+      "outro": 145
+     },
+     "1994": {
+      "pneumatica": 119,
+      "outro": 137
+     },
+     "1997": {
+      "pneumatica": 116,
+      "outro": 134
+     },
+     "2000": {
+      "pneumatica": 115,
+      "outro": 133
+     }
+    },
+    "26000_26999": {
+     "1990": {
+      "pneumatica": 216,
+      "outro": 271
+     },
+     "1991": {
+      "pneumatica": 204,
+      "outro": 252
+     },
+     "1994": {
+      "pneumatica": 193,
+      "outro": 243
+     },
+     "1997": {
+      "pneumatica": 186,
+      "outro": 234
+     },
+     "2000": {
+      "pneumatica": 185,
+      "outro": 233
+     }
+    },
+    "27000_28999": {
+     "1990": {
+      "pneumatica": 217,
+      "outro": 271
+     },
+     "1991": {
+      "pneumatica": 205,
+      "outro": 255
+     },
+     "1994": {
+      "pneumatica": 194,
+      "outro": 243
+     },
+     "1997": {
+      "pneumatica": 187,
+      "outro": 235
+     },
+     "2000": {
+      "pneumatica": 186,
+      "outro": 233
+     }
+    },
+    "29000_plus": {
+     "1990": {
+      "pneumatica": 245,
+      "outro": 364
+     },
+     "1991": {
+      "pneumatica": 229,
+      "outro": 343
+     },
+     "1994": {
+      "pneumatica": 219,
+      "outro": 327
+     },
+     "1997": {
+      "pneumatica": 212,
+      "outro": 317
+     },
+     "2000": {
+      "pneumatica": 210,
+      "outro": 314
+     }
+    }
+   }
+  },
+  "ARTICULADOS": {
+   "2_1": {
+    "12000": {
+     "1990": {
+      "pneumatica": 70,
+      "outro": 70
+     },
+     "1991": {
+      "pneumatica": 65,
+      "outro": 65
+     },
+     "1994": {
+      "pneumatica": 61,
+      "outro": 61
+     },
+     "1997": {
+      "pneumatica": 59,
+      "outro": 59
+     },
+     "2000": {
+      "pneumatica": 59,
+      "outro": 59
+     }
+    },
+    "12001_17999": {
+     "1990": {
+      "pneumatica": 81,
+      "outro": 105
+     },
+     "1991": {
+      "pneumatica": 77,
+      "outro": 99
+     },
+     "1994": {
+      "pneumatica": 74,
+      "outro": 95
+     },
+     "1997": {
+      "pneumatica": 72,
+      "outro": 92
+     },
+     "2000": {
+      "pneumatica": 71,
+      "outro": 91
+     }
+    },
+    "18000_24999": {
+     "1990": {
+      "pneumatica": 106,
+      "outro": 138
+     },
+     "1991": {
+      "pneumatica": 100,
+      "outro": 130
+     },
+     "1994": {
+      "pneumatica": 92,
+      "outro": 125
+     },
+     "1997": {
+      "pneumatica": 92,
+      "outro": 121
+     },
+     "2000": {
+      "pneumatica": 92,
+      "outro": 119
+     }
+    },
+    "25000_25999": {
+     "1990": {
+      "pneumatica": 133,
+      "outro": 197
+     },
+     "1991": {
+      "pneumatica": 126,
+      "outro": 184
+     },
+     "1994": {
+      "pneumatica": 116,
+      "outro": 176
+     },
+     "1997": {
+      "pneumatica": 116,
+      "outro": 171
+     },
+     "2000": {
+      "pneumatica": 115,
+      "outro": 169
+     }
+    },
+    "26000_plus": {
+     "1990": {
+      "pneumatica": 203,
+      "outro": 270
+     },
+     "1991": {
+      "pneumatica": 188,
+      "outro": 252
+     },
+     "1994": {
+      "pneumatica": 175,
+      "outro": 241
+     },
+     "1997": {
+      "pneumatica": 175,
+      "outro": 234
+     },
+     "2000": {
+      "pneumatica": 173,
+      "outro": 232
+     }
+    }
+   },
+   "2_2": {
+    "less_23000": {
+     "1990": {
+      "pneumatica": 81,
+      "outro": 105
+     },
+     "1991": {
+      "pneumatica": 77,
+      "outro": 99
+     },
+     "1994": {
+      "pneumatica": 74,
+      "outro": 96
+     },
+     "1997": {
+      "pneumatica": 72,
+      "outro": 92
+     },
+     "2000": {
+      "pneumatica": 71,
+      "outro": 91
+     }
+    },
+    "23000_24999": {
+     "1990": {
+      "pneumatica": 100,
+      "outro": 132
+     },
+     "1991": {
+      "pneumatica": 95,
+      "outro": 125
+     },
+     "1994": {
+      "pneumatica": 88,
+      "outro": 118
+     },
+     "1997": {
+      "pneumatica": 85,
+      "outro": 115
+     },
+     "2000": {
+      "pneumatica": 84,
+      "outro": 114
+     }
+    },
+    "25000_25999": {
+     "1990": {
+      "pneumatica": 116,
+      "outro": 139
+     },
+     "1991": {
+      "pneumatica": 108,
+      "outro": 131
+     },
+     "1994": {
+      "pneumatica": 104,
+      "outro": 126
+     },
+     "1997": {
+      "pneumatica": 101,
+      "outro": 122
+     },
+     "2000": {
+      "pneumatica": 100,
+      "outro": 121
+     }
+    },
+    "26000_28999": {
+     "1990": {
+      "pneumatica": 167,
+      "outro": 233
+     },
+     "1991": {
+      "pneumatica": 156,
+      "outro": 218
+     },
+     "1994": {
+      "pneumatica": 149,
+      "outro": 209
+     },
+     "1997": {
+      "pneumatica": 144,
+      "outro": 203
+     },
+     "2000": {
+      "pneumatica": 143,
+      "outro": 202
+     }
+    },
+    "29000_30999": {
+     "1990": {
+      "pneumatica": 200,
+      "outro": 265
+     },
+     "1991": {
+      "pneumatica": 186,
+      "outro": 249
+     },
+     "1994": {
+      "pneumatica": 179,
+      "outro": 238
+     },
+     "1997": {
+      "pneumatica": 173,
+      "outro": 230
+     },
+     "2000": {
+      "pneumatica": 172,
+      "outro": 228
+     }
+    },
+    "31000_32999": {
+     "1990": {
+      "pneumatica": 236,
+      "outro": 313
+     },
+     "1991": {
+      "pneumatica": 221,
+      "outro": 294
+     },
+     "1994": {
+      "pneumatica": 212,
+      "outro": 279
+     },
+     "1997": {
+      "pneumatica": 206,
+      "outro": 271
+     },
+     "2000": {
+      "pneumatica": 204,
+      "outro": 269
+     }
+    },
+    "33000_plus": {
+     "1990": {
+      "pneumatica": 315,
+      "outro": 366
+     },
+     "1991": {
+      "pneumatica": 295,
+      "outro": 345
+     },
+     "1994": {
+      "pneumatica": 282,
+      "outro": 328
+     },
+     "1997": {
+      "pneumatica": 272,
+      "outro": 318
+     },
+     "2000": {
+      "pneumatica": 270,
+      "outro": 316
+     }
+    }
+   },
+   "2_3": {
+    "less_36000": {
+     "1990": {
+      "pneumatica": 232,
+      "outro": 265
+     },
+     "1991": {
+      "pneumatica": 217,
+      "outro": 249
+     },
+     "1994": {
+      "pneumatica": 207,
+      "outro": 237
+     },
+     "1997": {
+      "pneumatica": 202,
+      "outro": 229
+     },
+     "2000": {
+      "pneumatica": 199,
+      "outro": 228
+     }
+    },
+    "36000_37999": {
+     "1990": {
+      "pneumatica": 247,
+      "outro": 348
+     },
+     "1991": {
+      "pneumatica": 233,
+      "outro": 326
+     },
+     "1994": {
+      "pneumatica": 221,
+      "outro": 312
+     },
+     "1997": {
+      "pneumatica": 214,
+      "outro": 301
+     },
+     "2000": {
+      "pneumatica": 212,
+      "outro": 299
+     }
+    },
+    "38000_plus": {
+     "1990": {
+      "pneumatica": 341,
+      "outro": 377
+     },
+     "1991": {
+      "pneumatica": 320,
+      "outro": 353
+     },
+     "1994": {
+      "pneumatica": 305,
+      "outro": 338
+     },
+     "1997": {
+      "pneumatica": 295,
+      "outro": 326
+     },
+     "2000": {
+      "pneumatica": 293,
+      "outro": 324
+     }
+    }
+   },
+   "3_2": {
+    "less_36000": {
+     "1990": {
+      "pneumatica": 196,
+      "outro": 228
+     },
+     "1991": {
+      "pneumatica": 183,
+      "outro": 215
+     },
+     "1994": {
+      "pneumatica": 176,
+      "outro": 206
+     },
+     "1997": {
+      "pneumatica": 170,
+      "outro": 198
+     },
+     "2000": {
+      "pneumatica": 169,
+      "outro": 197
+     }
+    },
+    "36000_37999": {
+     "1990": {
+      "pneumatica": 235,
+      "outro": 307
+     },
+     "1991": {
+      "pneumatica": 220,
+      "outro": 288
+     },
+     "1994": {
+      "pneumatica": 211,
+      "outro": 275
+     },
+     "1997": {
+      "pneumatica": 205,
+      "outro": 265
+     },
+     "2000": {
+      "pneumatica": 204,
+      "outro": 263
+     }
+    },
+    "38000_39999": {
+     "1990": {
+      "pneumatica": 309,
+      "outro": 360
+     },
+     "1991": {
+      "pneumatica": 290,
+      "outro": 340
+     },
+     "1994": {
+      "pneumatica": 276,
+      "outro": 324
+     },
+     "1997": {
+      "pneumatica": 268,
+      "outro": 314
+     },
+     "2000": {
+      "pneumatica": 264,
+      "outro": 311
+     }
+    },
+    "40000_plus": {
+     "1990": {
+      "pneumatica": 427,
+      "outro": 498
+     },
+     "1991": {
+      "pneumatica": 400,
+      "outro": 466
+     },
+     "1994": {
+      "pneumatica": 382,
+      "outro": 446
+     },
+     "1997": {
+      "pneumatica": 370,
+      "outro": 430
+     },
+     "2000": {
+      "pneumatica": 366,
+      "outro": 427
+     }
+    }
+   },
+   "3_3": {
+    "less_36000": {
+     "1990": {
+      "pneumatica": 163,
+      "outro": 212
+     },
+     "1991": {
+      "pneumatica": 153,
+      "outro": 200
+     },
+     "1994": {
+      "pneumatica": 146,
+      "outro": 190
+     },
+     "1997": {
+      "pneumatica": 142,
+      "outro": 183
+     },
+     "2000": {
+      "pneumatica": 140,
+      "outro": 182
+     }
+    },
+    "36000_37999": {
+     "1990": {
+      "pneumatica": 214,
+      "outro": 265
+     },
+     "1991": {
+      "pneumatica": 203,
+      "outro": 249
+     },
+     "1994": {
+      "pneumatica": 192,
+      "outro": 238
+     },
+     "1997": {
+      "pneumatica": 185,
+      "outro": 230
+     },
+     "2000": {
+      "pneumatica": 184,
+      "outro": 228
+     }
+    },
+    "38000_39999": {
+     "1990": {
+      "pneumatica": 249,
+      "outro": 270
+     },
+     "1991": {
+      "pneumatica": 235,
+      "outro": 251
+     },
+     "1994": {
+      "pneumatica": 223,
+      "outro": 241
+     },
+     "1997": {
+      "pneumatica": 217,
+      "outro": 233
+     },
+     "2000": {
+      "pneumatica": 215,
+      "outro": 232
+     }
+    },
+    "40000_plus": {
+     "1990": {
+      "pneumatica": 257,
+      "outro": 363
+     },
+     "1991": {
+      "pneumatica": 241,
+      "outro": 342
+     },
+     "1994": {
+      "pneumatica": 229,
+      "outro": 326
+     },
+     "1997": {
+      "pneumatica": 222,
+      "outro": 316
+     },
+     "2000": {
+      "pneumatica": 220,
+      "outro": 313
+     }
+    }
+   }
+  }
+ }
+}

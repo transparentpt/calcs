@@ -1,0 +1,117 @@
+openapi: 3.1.0
+info:
+  title: Portugal car-tax API (ISV & IUC)
+  version: "1.0.0"
+  summary: Key-free ISV (import tax) & IUC (annual road tax) estimates for Portugal.
+  description: |
+    Open-source calculators for the two Portuguese vehicle taxes, served as a key-free JSON API.
+    This spec covers the self-hostable reference server (`app.py`); the same `/isv` contract is
+    served by the hosted instance at `https://transparent.pt/api/public`.
+
+    **Honesty / accuracy.** Figures are a **maintained estimate** cross-checked against the official
+    AT (Autoridade Tributária) simulator and tax tables — **not** the official AT figure and not a
+    substitute for the AT simulator or a licensed despachante. Use for planning.
+
+    **Auth.** None. **No PII, no state** — vehicle params in, numbers out. Fair-use per-IP rate
+    limits apply (`429` + `Retry-After`); responses are cacheable.
+  contact:
+    name: TransparentCars
+    url: https://transparent.pt/en/api
+    email: info@transparent.pt
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: https://transparent.pt/api/public
+    description: Hosted instance
+  - url: http://localhost:8080
+    description: Local self-hosted (uvicorn app:app)
+
+tags:
+  - name: Tax calculators
+    description: ISV (import tax) + IUC (annual road tax) estimates for Portugal.
+
+paths:
+  /isv:
+    get:
+      tags: [Tax calculators]
+      operationId: estimateIsvIuc
+      summary: Estimate ISV (import tax) and IUC (annual road tax)
+      description: Returns both taxes in one call from engine cc + CO₂ + fuel + first-registration year.
+      parameters:
+        - { name: cc, in: query, schema: { type: integer, minimum: 0, maximum: 10000, default: 0 }, description: Engine displacement (cm³) }
+        - { name: co2, in: query, schema: { type: integer, minimum: 0, maximum: 1000, default: 0 }, description: CO₂ g/km }
+        - { name: fuel, in: query, schema: { type: string, default: petrol, enum: [petrol, diesel, electric, phev, hybrid] } }
+        - { name: year, in: query, schema: { type: integer, minimum: 1950 }, description: First-registration year }
+        - { name: month, in: query, schema: { type: integer, minimum: 1, maximum: 12, default: 6 } }
+        - { name: from_eu, in: query, schema: { type: boolean, default: true } }
+        - { name: range_km, in: query, schema: { type: integer, minimum: 0, maximum: 2000, default: 0 }, description: Electric range (PHEV ≥50 km for the 75% reduction) }
+        - { name: used, in: query, schema: { type: boolean, default: true }, description: false=novo → no age reduction }
+        - { name: vehicle_type, in: query, schema: { type: string, default: passenger, enum: [passenger, van_10, commercial_15, commercial_50, commercial_100, motorcycle, autocaravana] } }
+        - { name: particulas, in: query, schema: { type: boolean, default: true }, description: Diesel particle surcharge }
+      responses:
+        "200":
+          description: ISV + IUC estimate
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isv: { $ref: "#/components/schemas/IsvResult" }
+                  iuc: { $ref: "#/components/schemas/IucResult" }
+                  source: { type: string, format: uri }
+                  disclaimer: { type: string }
+              examples:
+                dieselUsedImport:
+                  summary: 2016 diesel, 1950 cc, 130 g/km, used EU import
+                  value:
+                    isv: { isv: 1832.92, exempt: false, table: "A" }
+                    iuc: { iuc: 278.85, category: "B", exempt: false }
+                    source: "https://transparent.pt/en/isv"
+                    disclaimer: "Maintained estimate of the Portuguese tax — not the official AT figure."
+        "429":
+          description: Rate limited
+          headers:
+            Retry-After: { schema: { type: integer }, description: Seconds to wait }
+  /iuc:
+    get:
+      tags: [Tax calculators]
+      operationId: estimateIuc
+      summary: Estimate IUC (annual road tax) only
+      parameters:
+        - { name: cc, in: query, schema: { type: integer, minimum: 0, maximum: 10000, default: 0 } }
+        - { name: co2, in: query, schema: { type: integer, minimum: 0, maximum: 1000, default: 0 } }
+        - { name: fuel, in: query, schema: { type: string, default: petrol, enum: [petrol, diesel, electric, phev, hybrid] } }
+        - { name: year, in: query, schema: { type: integer, minimum: 1950 } }
+        - { name: vehicle_type, in: query, schema: { type: string, default: passenger, enum: [passenger, motorcycle] } }
+      responses:
+        "200":
+          description: IUC estimate
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  iuc: { $ref: "#/components/schemas/IucResult" }
+                  source: { type: string, format: uri }
+                  disclaimer: { type: string }
+        "429":
+          description: Rate limited
+
+components:
+  schemas:
+    IsvResult:
+      type: object
+      properties:
+        isv: { type: number, description: Estimated ISV in EUR }
+        exempt: { type: boolean }
+        table: { type: string, description: "Tabela applied: A/B/C/D" }
+        note: { type: [string, "null"] }
+    IucResult:
+      type: object
+      properties:
+        iuc: { type: number, description: Estimated annual IUC in EUR }
+        exempt: { type: boolean }
+        category: { type: string, description: "Categoria: A/B/E" }
+        note: { type: [string, "null"] }

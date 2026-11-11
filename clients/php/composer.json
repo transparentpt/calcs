@@ -1,0 +1,35 @@
+{
+    "name": "transparentpt/portugal-vehicle-tax",
+    "description": "PHP client for the TransparentCars Portuguese vehicle-tax API — ISV (import tax) + IUC (annual road tax). A maintained estimate, cross-checked against the official AT simulator.",
+    "type": "library",
+    "keywords": ["ISV", "IUC", "Portugal", "vehicle tax", "car import", "imposto", "car-tax", "road-tax", "AT"],
+    "homepage": "https://transparent.pt",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TransparentCars",
+            "homepage": "https://transparent.pt"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/transparentpt/calcs/issues",
+        "source": "https://github.com/transparentpt/calcs",
+        "docs": "https://transparent.pt/en/api"
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "TransparentCars\\VehicleTax\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TransparentCars\\VehicleTax\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "php tests/SmokeTest.php"
+    }
+}

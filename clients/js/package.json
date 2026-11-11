@@ -1,0 +1,55 @@
+{
+  "name": "portugal-vehicle-tax",
+  "version": "1.0.1",
+  "description": "TypeScript client for the TransparentCars Portuguese vehicle-tax API — ISV (import tax) + IUC (annual road tax). A maintained estimate, cross-checked against the official AT simulator.",
+  "keywords": [
+    "ISV",
+    "IUC",
+    "Portugal",
+    "vehicle tax",
+    "car import",
+    "imposto",
+    "car-tax",
+    "road-tax",
+    "AT",
+    "typescript"
+  ],
+  "homepage": "https://transparent.pt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transparentpt/calcs.git",
+    "directory": "clients/js"
+  },
+  "bugs": {
+    "url": "https://github.com/transparentpt/calcs/issues"
+  },
+  "license": "MIT",
+  "author": "TransparentCars (https://transparent.pt)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node test/smoke.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

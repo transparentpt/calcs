@@ -1,0 +1,7 @@
+# The calculators (src/isv.py, src/iuc.py) are pure stdlib — zero deps, importable as a library.
+# These are only needed to run the optional reference HTTP API (app.py).
+fastapi>=0.110
+uvicorn[standard]>=0.29
+# tests
+pytest>=8.0
+httpx>=0.27          # for fastapi TestClient
